@@ -1,32 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700&display=swap');
 
-/* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* ------------------------------
+   RESET
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background: #fff;
 }
 
-/* HERO */
+/* ------------------------------
+   HERO
+--------------------------------*/
 .hero {
   position: relative;
   height: 100svh;
   background: #3F00FF;
 }
 
-.sd-hero{
+.sd-hero {
   margin: 0 0 28px 0;
 }
 
-.sd-hero-img{
+.sd-hero-img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px; /* optional */
+  border-radius: 12px;
 }
 
-/* CENTER CONTENT */
+/* ------------------------------
+   HERO CONTENT
+--------------------------------*/
 .hero-content {
   position: absolute;
   inset: 0;
@@ -37,7 +47,9 @@ body {
   text-align: center;
 }
 
-/* TYPOGRAPHY */
+/* ------------------------------
+   TYPOGRAPHY
+--------------------------------*/
 h1.main {
   font-family: 'Spectral', serif;
   font-size: 64px;
@@ -55,7 +67,9 @@ h1.main {
   opacity: 0.85;
 }
 
-/* FOOTER MARK */
+/* ------------------------------
+   HERO FOOTER
+--------------------------------*/
 .hero-footer {
   position: absolute;
   bottom: 36px;
@@ -65,179 +79,171 @@ h1.main {
 
 .trifecta {
   width: 80px;
-  height: auto;
   margin-bottom: 8px;
   opacity: 0.9;
 }
 
-.footer-text {
+.footer-text-inside {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #fff;
+  color: #3F00FF;
   opacity: 0.75;
 }
 
-.footer-text {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #fff;
-  opacity: 0.75;
-}
-
-/* CTA BUTTON */
-.cta-button {
-    margin-top: 28px;
-    padding: 10px 22px;
-  
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 16px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  
-    color: #fff;
-    text-decoration: none;
-  
-    border: 1px solid #fff;
-    background: transparent;
-  
-    transition: all 0.25s ease;
-  }
-  
-  /* Hover: very restrained */
-  .cta-button:hover {
-    background: rgba(255,255,255,0.08);
-  }
-
-  
 /* ------------------------------
-   MODAL STRUCTURE
+   CTA BUTTON
+--------------------------------*/
+.cta-button {
+  margin-top: 28px;
+  padding: 10px 22px;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  background: transparent;
+
+  transition: background 0.25s ease;
+}
+
+.cta-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ------------------------------
+   MODAL BODY
 --------------------------------*/
 .modal-body {
-    background: #fff;
-    color: #3F00FF;
-}
-
-.modal-wrapper {
-    width: 1028px;
-    margin: 0 auto;
-    padding: 60px 0 120px;
-    position: relative;
+  background: #fff;
+  color: #3F00FF;
 }
 
 /* ------------------------------
-   STICKY HEADER BAR
+   MODAL WRAPPER
+--------------------------------*/
+.modal-wrapper {
+  max-width: 1028px;
+  margin: 0 auto;
+  padding: 60px 0 120px;
+  position: relative;
+}
+
+/* ------------------------------
+   STICKY MODAL HEADER (FIXED)
 --------------------------------*/
 .modal-header-bar {
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 0;
-    margin-bottom: 20px;
-
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.25s ease;
+  background: #fff;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease;
 }
 
 .modal-header-bar.scrolled {
-    border-bottom-color: #3F00FF;
+  border-bottom-color: #3F00FF;
 }
 
-.modal-close {
-    position: relative;
-    top: 0;
-    right: 0;
+/* INNER WIDTH CONSTRAINER */
+.modal-header-inner {
+  max-width: 1028px;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.modal-close img {
-    width: 24px;
-}
-
+/* HEADER TEXT */
 .modal-breadcrumb {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.55;
-    letter-spacing: 1.5px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  color: #3F00FF;
+}
+
+/* CLOSE BUTTON */
+.modal-close img {
+  width: 24px;
+  display: block;
 }
 
 /* ------------------------------
    MODAL CONTENT
 --------------------------------*/
 .modal-section-title {
-    font-size: 46px;
-    font-weight: 500;
-    margin-bottom: 10px;
+  font-family: 'Spectral', serif;
+  font-size: 46px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .modal-hr-small {
-    width: 40px;
-    border: none;
-    border-bottom: 10px solid #3F00FF;
-    margin-bottom: 30px;
+  width: 40px;
+  border: none;
+  border-bottom: 10px solid #3F00FF;
+  margin-bottom: 30px;
 }
 
 .modal-hr-big {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #3F00FF;
-    margin-top: 50px;
-    margin-bottom: 50px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #3F00FF;
+  margin: 50px 0;
 }
 
 .modal-content h1 {
-    font-family: 'Spectral', serif;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    color: #3F00FF;
+  font-family: 'Spectral', serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #3F00FF;
 }
 
 .modal-content p {
-    font-family: 'Spectral', serif;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 25px;
-    color: #3F00FF;
+  font-family: 'Spectral', serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  color: #3F00FF;
 }
 
-.modal-content ul,
-.modal-bullets {
-    list-style-type: disc;
-    list-style-position: inside;
-    padding-left: 0;
-    margin-left: 0;
+.modal-content ul {
+  list-style: disc inside;
+  margin-bottom: 25px;
 }
 
 .modal-content a {
-    color: #fff;
-    text-decoration: underline;   /* underline always ON */
+  color: #3F00FF;
+  text-decoration: underline;
 }
 
+/* ------------------------------
+   QUOTE
+--------------------------------*/
 .modal-quote {
-    font-size: 62px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-top: 60px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  font-family: 'Spectral', serif;
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 60px 0;
 }
 
-/* MOBILE */
+/* ------------------------------
+   MOBILE
+--------------------------------*/
 @media (max-width: 768px) {
-  .hero {
-    background-position: center center;
-  }
 
   h1.main {
     font-size: 36px;
@@ -247,18 +253,24 @@ h1.main {
     font-size: 18px;
   }
 
-  .hero-footer {
-    bottom: 28px;
-  }
-
   .trifecta {
     width: 30px;
   }
 
   .modal-wrapper {
-    width: 100% !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-}
+    max-width: 100%;
+    padding: 40px 20px 80px;
+  }
 
+  .modal-header-inner {
+    padding: 16px 20px;
+  }
+
+  .modal-breadcrumb {
+    font-size: 14px;
+  }
+
+  .modal-quote {
+    font-size: 36px;
+  }
 }
